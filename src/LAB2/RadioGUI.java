@@ -34,9 +34,18 @@ public class RadioGUI extends JFrame {
         showmeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                if (appleRadioButton.isSelected()) logoLabel.setIcon(iconApple);
-                else if (samsungRadioButton.isSelected()) logoLabel.setIcon(iconSamsung);
-                else if (lgRadioButton.isSelected()) logoLabel.setIcon(iconLG);
+                if (appleRadioButton.isSelected()) {
+                    logoLabel.setIcon(iconApple);
+                    JOptionPane.showMessageDialog(null,"Wybrałeś Apple");
+                }
+                else if (samsungRadioButton.isSelected()) {
+                    logoLabel.setIcon(iconSamsung);
+                    JOptionPane.showMessageDialog(null,"Wybrałeś Samsunga");
+                }
+                else if (lgRadioButton.isSelected()) {
+                    logoLabel.setIcon(iconLG);
+                    JOptionPane.showMessageDialog(null,"Wybrałeś LG");
+                }
                 else JOptionPane.showMessageDialog(null,"Nic nie wybrano");
             }
         });
